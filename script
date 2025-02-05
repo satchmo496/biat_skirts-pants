@@ -1,1 +1,189 @@
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qualtrics/qbiat6.js'], function(APIConstructor, iatExtension){
+ var API = new APIConstructor();
 
+	
+	return iatExtension({
+		practiceCategory1 : 
+			{
+				name : 'Skirts', //Will appear in the data.
+				title : {
+					media : {word : 'Skirts'}, //Name of the category presented in the task.
+					css : {color:'#31b404','font-size':'1.8em'}, //Style of the category title.
+					height : 4, //Height (because we need to know where to put the next item in the title)
+					startStimulus : { 
+					//If you're using a startStimulus, set here. If not, set the parameter showStimuliWithInst to false (see later below)
+						media : {word : 'Dogs, Horses, Cows, Lions'}, 
+						css : {color:'#31b404','font-size':'1em'}, 
+						height : 2
+					}
+				}, 
+				stimulusMedia : [ //Stimuli content as PIP's media objects
+					{word : 'Dogs'}, 
+					{word : 'Horses'}, 
+					{word : 'Lions'}, 
+					{word : 'Cows'}
+				], 
+				//Stimulus css (style of the stimuli)
+				stimulusCss : {color:'#31b404','font-size':'2em'}
+			},	
+			practiceCategory2 : 
+			{
+				name : 'Pants', 
+				title : {
+					media : {word : 'Pants'}, 
+					css : {color:'#31b404','font-size':'1.8em'}, 
+					height : 4,
+					startStimulus : {
+						media : {word : 'Pigeons, Swans, Crows, Ravens'}, 
+						css : {color:'#31b404','font-size':'1em'}, 
+						height : 2
+					}
+				}, 
+				stimulusMedia : [ //Stimuli content as PIP's media objects
+					{word : 'Pigeons'}, 
+					{word : 'Swans'}, 
+					{word : 'Crows'}, 
+					{word : 'Ravens'}
+				], 
+				//Stimulus css
+				stimulusCss : {color:'#31b404','font-size':'2em'}
+			},
+			categories : [  //As many categories you need.
+				{
+					name : 'Skirts', //Will appear in the data.
+					title : {
+						media : {word : 'Skirts'}, //Name of the category presented in the task.
+						css : {color:'#31b404','font-size':'1.8em'}, //Style of the category title.
+						height : 4, //Height (because we need to know where to put the next item in the title)
+						startStimulus : {
+							media : {word : 'person with anxiety, person with depression, person with schizophrenia'},
+							css : {color:'#31b404','font-size':'1em'}, 
+							height : 13
+						}
+					}, 
+					stimulusMedia : [ //Stimuli content as PIP's media objects
+					      {image : 'skirts1.jpg'}, 
+        				{image : 'skirts2.jpg'}, 
+        				{image : 'skirts3.jpg'},
+					      {image : 'skirts4.jpg'},
+					      {image : 'skirts5.jpg'},
+					      {image : 'skirts6.jpg'}
+        				], 
+					//Stimulus css (style of the stimuli)
+					stimulusCss : {color:'#31b404','font-size':'2em'}
+				},	
+				{
+					name : 'Pants', 
+					title : {
+						media : {word : 'Pants'}, 
+						css : {color:'#31b404','font-size':'1.8em'}, 
+						height : 4,
+						startStimulus : {
+							media : {word : 'person with appendicitis, person with cancer, person with pneumonia'},  
+							css : {color:'#31b404','font-size':'1em'}, 
+							height : 13
+						}
+					}, 
+					stimulusMedia : [ //Stimuli content as PIP's media objects
+				      	{image : 'pants1.jpg'}, 
+        				{image : 'pants4.jpg'}, 
+        				{image : 'pants3.jpg'},
+				      	{image : 'pants4.jpg'},
+					      {image : 'pants5.jpg'},
+					      {image : 'pants6.jpg'}
+        				], 
+					//Stimulus css
+					stimulusCss : {color:'#31b404','font-size':'2em'}
+				}
+			],
+      attribute1 : 
+			{
+				name : 'Pleasant', 
+				title : {
+					media : {word : 'Pleasant'}, 
+					css : {color:'#0000FF','font-size':'1.8em'}, 
+					height : 4,
+					startStimulus : {
+						media : {word : 'Cheer, Excitement, Beautiful, Laughing, Pleasure, Celebrate, Glorious, Joyful'}, 
+						css : {color:'#0000FF','font-size':'1em'}, 
+						height : 2
+					}
+				}, 
+				stimulusMedia : [ //Stimuli content as PIP's media objects
+					{word : 'Cheer'}, 
+					{word : 'Excitement'}, 
+					{word : 'Beautiful'}, 
+					{word : 'Laughing'},
+					{word : 'Pleasure'},
+					{word : 'Celebrate'},
+					{word : 'Glorious'},
+					{word : 'Joyful'},
+				], 
+				//Stimulus css
+				stimulusCss : {color:'#0000FF','font-size':'2em'}
+			},	
+			attribute2 : 
+			{
+				name : 'Unpleasant', 
+				title : {
+					media : {word : 'Unpleasant'}, 
+					css : {color:'#0000FF','font-size':'1.8em'}, 
+					height : 4,
+					startStimulus : {
+						media : {word : 'Horrible, Negative, Annoy, Ugly, Hatred, Sick, Hate, Poison'}, 
+						css : {color:'#0000FF','font-size':'1em'}, 
+						height : 2
+					}
+				}, 
+				stimulusMedia : [ //Stimuli content as PIP's media objects
+					{word : 'Horrible'}, 
+					{word : 'Negative'}, 
+					{word : 'Annoy'}, 
+					{word : 'Ugly'},
+					{word : 'Hatred'},
+					{word : 'Sick'},
+					{word : 'Hate'},
+					{word : 'Poison'},
+				], 
+				//Stimulus css
+				stimulusCss : {color:'#0000FF','font-size':'2em'} 
+			},
+			base_url : {//Where are your images at?
+			image : 'https://satchmo496.github.io/images/'
+			},
+      //practiceTrials are a few trials at the beginning of the task (Sriram & Greenwald recommend 2 trials for each category).
+			practiceTrials : //Set number of trials per group in the practice trials at the beginning of the task
+			{//Can set 0 to all to remove the practice trials.
+				nFocalCat : 2, //Number of trials for the focal category.
+				nNonFocalCats : 2, //Number of trials for each non-focal category.  (in a mini block).
+				nFocalAtt : 2, //Number of trials for the focal attribute (in a mini block).
+				nNonFocalAtt : 2 //Number of trials for the non-focal attribute (in a mini-block). 
+			},
+      
+      //Sets whether we use a certain focal attribute throughout the task, or both.
+			focalAttribute : 'both', // Accepts 'attribute1', 'attribute2' or 'both', 
+			
+			//focalCategoryOrder can be: 'bySequence', 'random'.
+			//If bySequence then we always start with categories[0] as the first focal category.
+			focalCategoryOrder : 'random', 
+      
+      //Sets what attribute appears first. Irrelevant if focalAttributes is not 'both'. 
+			firstFocalAttribute : 'random', //Accepts 'attribute1', 'attribute2' or 'random'. 
+      
+      //Whether to start with a practice block.
+			practiceBlock : false, 
+			nPracticeBlockTrials : 8, //Should be at least 8 trials.
+			
+	//Whether to switch the focal attribute only once in the task (after all the blocks with the first focal attribute), 
+	//Or after every exhaustion of all the category-attribute combinations (e.g., twice if nCategoryAttributeBlocks).
+	//Relevant only when nCategoryAttributeBlocks>1, 
+	//and only if there is more than one focal attribute.
+			switchFocalAttributeOnce : true, 
+
+			//Number of blocks per focal category-attribute combination.
+			nCategoryAttributeBlocks : 2, 
+			
+			showStimuliWithInst : false,
+
+	});
+});
