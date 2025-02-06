@@ -62,12 +62,12 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/BIAT/qual
 						}
 					}, 
 					stimulusMedia : [ //Stimuli content as PIP's media objects
-					      {image : 'skirts1.jpg'}, 
-        				{image : 'skirts2.jpg'}, 
-        				{image : 'skirts3.jpg'},
-					      {image : 'skirts4.jpg'},
-					      {image : 'skirts5.jpg'},
-					      {image : 'skirts6.jpg'}
+					      {image : 'skirt1.jpg'}, 
+        				{image : 'skirt2.jpg'}, 
+        				{image : 'skirt3.jpg'},
+					      {image : 'skirt4.jpg'},
+					      {image : 'skirt5.jpg'},
+					      {image : 'skirt6.jpg'}
         				], 
 					//Stimulus css (style of the stimuli)
 					stimulusCss : {color:'#31b404','font-size':'2em'}
